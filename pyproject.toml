@@ -62,8 +62,8 @@ dependencies = [
 
 # Project URLs (replace with your actual links)
 [project.urls]
-"Homepage" = "https://github.com/yourusername/price-tracker-project" # Link to your GitHub repo
-"Bug Tracker" = "https://github.com/yourusername/price-tracker-project/issues" # Link to your issue tracker
+"Homepage" = "https://github.com/AlexandroFSD/price_tracker" # Link to your GitHub repo
+"Bug Tracker" = "https://github.com/AlexandroFSD/price_tracker/issues" # Link to your issue tracker
 
 # Optional dependencies (e.g., dependencies needed only for testing or documentation)
 [project.optional-dependencies]

@@ -49,7 +49,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Cloning the Repository
 
 ```bash
-git clone <URL вашого репозиторію на GitHub>
+git clone https://github.com/AlexandroFSD/price_tracker
 cd price-tracker
 ```
 
