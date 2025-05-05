@@ -1,0 +1,24 @@
+
+{
+  "global_notification_channels": ["telegram"],
+  "items": [
+    {
+      "name": "LAND ROVER RANGE ROVER EVOQUE S (163PS)-26 MY Tribeca Blue",
+      "url": "https://landrover-vidi.com/ru/car-in-stock/card/land-rover-range-rover-evoque-4098/",
+      "selector": [
+        ".test > div:nth-child(1) > span:nth-child(1)",
+        "/html/body/div[2]/div/main/section[3]/div/div/div/div/div/div/span"
+      ],
+      "target_price": 2895795.00
+    },
+    {
+      "name": "49 SAMSUNG Odyssey OLED G9 (LS49DG910SIXCI)",
+      "url": "https://www.moyo.ua/ua/monitor_49_samsung_odyssey_oled_g9_ls49dg910sixci_/621540.html",
+      "selector": [
+        ".product_price_current > span:nth-child(3)",
+        "/html/body/div[1]/main/div[2]/div[2]/div[1]/div[2]/div/div[4]/div[1]/div/span"
+      ],
+      "target_price": 48999.00
+    }
+  ]
+}

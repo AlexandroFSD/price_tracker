@@ -1,0 +1,33 @@
+# Ignore IDE-specific files
+.idea/
+
+# Ignore virtual environment directories
+.venv/
+env/
+venv/
+
+# Ignore log files and directory
+logs/
+*.log
+
+# Ignore the environment variables file which contains secrets
+.env
+# BUT, do NOT ignore the specific file named .env.example
+!.env.example
+
+# Ignore Python compiled bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore files generated during package building
+dist/
+build/
+*.egg-info/
+
+# Ignore the SQLite database file
+*.db
+
+# Optional: Ignore OS-specific hidden files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+# Project dependencies for the Price Tracker application
+
+# For loading environment variables from .env files
+python-dotenv~=1.0.1 # Or just dotenv if you prefer, but python-dotenv is common
+
+# For Telegram notifications
+aiogram~=3.20.0
+
+# For asynchronous HTTP requests
+aiohttp~=3.11.18
+
+# For parsing HTML and XML documents using XPath/CSS selectors
+lxml~=5.3.1
+
+# Dependency for lxml to support CSS selectors
+cssselect~=1.3.0
+
+# For running tests
+pytest~=8.3.5
+
+# You might want to add other dependencies here if needed in the future
+# e.g., PyYAML if using YAML config, specific database drivers etc.

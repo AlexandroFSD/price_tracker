@@ -1,0 +1,114 @@
+[build-system]
+# Specify the backend and requirements for building your project.
+# setuptools is a standard choice for package building.
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Basic project metadata
+# The unique name of your project on PyPI (if you publish it)
+name = "price-tracker"
+
+# The current version of your project
+version = "0.1.0"
+
+# A short description of your project
+description = "A Python application to track product prices from websites."
+
+# Path to your README file (usually Markdown or reStructuredText)
+readme = "README.md"
+
+# Minimum Python version required by your project
+requires-python = ">=3.8"
+
+# Project authors (replace with your name and email)
+authors = [
+  { name="AlexandroFSD", email="oleksandr.nechyporenko81@gmail.com" },
+  # { name="Another Author Name", email="another.email@example.com" }, # Add more authors if needed
+]
+
+# Keywords to help discover your project
+keywords = ["price tracker", "web scraping", "async", "notifications", "telegram", "email"]
+
+# Classifiers to categorize your project (choose relevant ones)
+# Full list: https://pypi.org/classifiers/
+classifiers = [
+    "Programming Language :: Python :: 3",
+    # "Programming Language :: Python :: 3.8", # Be specific if needed
+    # "Programming Language :: Python :: 3.9",
+    # "Programming Language :: Python :: 3.10",
+    # "Programming Language :: Python :: 3.11",
+    # "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha", # Adjust: 1 - Planning, 2 - Pre-Alpha, 3 - Alpha, 4 - Beta, 5 - Production/Stable
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Utilities",
+]
+
+# Project dependencies (runtime dependencies, equivalent to listing in requirements.txt)
+# When installing via pip install . or pip install .[dev], these will be handled.
+# Pinning versions using == or specifying ranges like ~= (compatible release) is common.
+dependencies = [
+    "python-dotenv~=1.0.1", # For loading .env files
+    "aiogram~=3.20.0",      # For Telegram notifications
+    "aiohttp~=3.11.18",     # For asynchronous HTTP requests
+    "lxml~=5.3.1",          # For parsing HTML/XML with XPath/CSS
+    "cssselect~=1.3.0",     # Dependency for lxml to support CSS selectors
+    # "PyYAML>=6.0",        # Uncomment if you decide to use YAML config
+    # Add other runtime dependencies here
+]
+
+# Project URLs (replace with your actual links)
+[project.urls]
+"Homepage" = "https://github.com/yourusername/price-tracker-project" # Link to your GitHub repo
+"Bug Tracker" = "https://github.com/yourusername/price-tracker-project/issues" # Link to your issue tracker
+
+# Optional dependencies (e.g., dependencies needed only for testing or documentation)
+[project.optional-dependencies]
+dev = [
+    "pytest~=8.3.5", # For running tests
+    # "flake8>=6.0",   # For linting
+    # "black>=23.0",   # For code formatting
+    # "isort>=5.0",    # For import sorting
+    # Add other development dependencies here
+]
+
+# --- Tool Specific Configurations ---
+
+# Configure setuptools' package discovery
+[tool.setuptools.packages.find]
+# Tells setuptools to look for packages (directories with __init__.py)
+# within the 'src' directory.
+where = ["src"]
+
+# Configure pytest within pyproject.toml (alternative to pytest.ini)
+[tool.pytest.ini_options]
+# Add 'src' to the Python path so modules can be imported correctly during tests.
+pythonpath = ["src"] # Use a list
+
+# Specify directories containing tests
+testpaths = ["tests"]
+
+# Specify file patterns for test files (defaults are often sufficient)
+# python_files = "test_*.py"
+
+# Specify class patterns for test classes (defaults are often sufficient)
+# python_classes = "Test"
+
+# Specify function patterns for test functions (defaults are often sufficient)
+# python_functions = "test_"
+
+# Optional: Configure logging capture during pytest runs (useful with -s flag)
+# log_cli = true           # Show logs on the console
+# log_cli_level = "DEBUG"  # Set the level for console logs
+# log_file = "pytest.log"  # Save logs to a file
+# log_file_level = "DEBUG" # Set the level for file logs
+
+# You can add configurations for other tools here, e.g.:
+# [tool.black]
+# line-length = 88
+
+# [tool.isort]
+# profile = "black"
